@@ -1,5 +1,5 @@
 # version 8 of node
-FROM node:8
+FROM node:8.15.0
 
 # create a directory for client
 RUN mkdir -p /usr/src/app
@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 # install app dependencies
 COPY package*.json ./
 
-RUN npm install 
+RUN npm install
 
 # bundle app source
 COPY . .
